@@ -16,17 +16,15 @@ class SwiperController extends IndexController {
   static const int BUILD = 5;
 
   // available when `event` == SwiperController.BUILD
-  SwiperPluginConfig config;
+  late SwiperPluginConfig config;
 
   // available when `event` == SwiperController.SWIPE
   // this value is PageViewController.pos
-  double pos;
+  late double pos;
 
-  int index;
-  bool animation;
-  bool autoplay;
-
-  SwiperController();
+  late int index;
+  late bool animation;
+  late bool autoplay;
 
   void startAutoplay() {
     event = SwiperController.START_AUTOPLAY;

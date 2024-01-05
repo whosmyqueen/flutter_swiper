@@ -11,15 +11,15 @@ abstract class SwiperPlugin {
 }
 
 class SwiperPluginConfig {
-  final int activeIndex;
-  final int itemCount;
-  final PageIndicatorLayout indicatorLayout;
-  final Axis scrollDirection;
-  final bool loop;
-  final bool outer;
-  final PageController pageController;
-  final SwiperController controller;
-  final SwiperLayout layout;
+  final int? activeIndex;
+  final int? itemCount;
+  final PageIndicatorLayout? indicatorLayout;
+  final Axis? scrollDirection;
+  final bool? loop;
+  final bool? outer;
+  final PageController? pageController;
+  final SwiperController? controller;
+  final SwiperLayout? layout;
 
   const SwiperPluginConfig(
       {this.activeIndex,
