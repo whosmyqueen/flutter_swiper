@@ -43,7 +43,7 @@ class Swiper extends StatefulWidget {
 
   /// Support transform like Android PageView did
   /// `itemBuilder` and `transformItemBuilder` must have one not null
-  final PageTransformer transformer;
+  final PageTransformer? transformer;
 
   /// count of the display items
   final int itemCount;
@@ -115,7 +115,7 @@ class Swiper extends StatefulWidget {
     this.indicatorLayout = PageIndicatorLayout.NONE,
 
     ///
-    required this.transformer,
+    this.transformer,
     required this.itemCount,
     this.autoplay = false,
     this.layout = SwiperLayout.DEFAULT,
@@ -478,7 +478,7 @@ class _SwiperState extends _SwiperTimerMixin {
         scrollDirection: widget.scrollDirection,
       );
     } else if (_isPageViewLayout()) {
-      PageTransformer transformer = widget.transformer;
+      PageTransformer? transformer = widget.transformer;
       if (widget.scale != null || widget.fade != null) {
         transformer = new ScaleAndFadeTransformer(scale: widget.scale!, fade: widget.fade!);
       }
