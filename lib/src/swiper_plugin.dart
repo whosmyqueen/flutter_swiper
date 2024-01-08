@@ -22,7 +22,7 @@ class SwiperPluginConfig {
   final SwiperLayout? layout;
 
   const SwiperPluginConfig(
-      {this.activeIndex,
+      {this.activeIndex = -1,
       this.itemCount,
       this.indicatorLayout,
       this.outer,
