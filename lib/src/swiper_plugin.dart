@@ -11,26 +11,26 @@ abstract class SwiperPlugin {
 }
 
 class SwiperPluginConfig {
-  int? activeIndex = 0;
-  int? itemCount = 0;
+  int activeIndex = 0;
+  int itemCount = 0;
   PageIndicatorLayout? indicatorLayout;
   Axis? scrollDirection;
-  bool? loop = false;
-  bool? outer = false;
+  bool loop = false;
+  bool outer = false;
   PageController? pageController;
   SwiperController? controller;
   SwiperLayout? layout;
 
   SwiperPluginConfig(
-      {this.activeIndex,
-      this.itemCount,
+      {this.activeIndex = 0,
+      this.itemCount = 0,
       this.indicatorLayout,
-      this.outer,
+      this.outer = false,
       this.scrollDirection,
       this.controller,
       this.pageController,
       this.layout,
-      this.loop});
+      this.loop = false});
 }
 
 class SwiperPluginView extends StatelessWidget {
