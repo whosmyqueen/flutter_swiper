@@ -74,7 +74,7 @@ class Swiper extends StatefulWidget {
   ///Index number of initial slide.
   ///If not set , the `Swiper` is 'uncontrolled', which means manage index by itself
   ///If set , the `Swiper` is 'controlled', which means the index is fully managed by parent widget.
-  final int index;
+  final int? index;
 
   ///Called when tap
   final SwiperOnTap? onTap;
@@ -123,7 +123,7 @@ class Swiper extends StatefulWidget {
     this.autoplayDisableOnInteraction = true,
     this.duration = kDefaultAutoplayTransactionDuration,
     this.onIndexChanged,
-    required this.index,
+    this.index,
     this.onTap,
     this.control,
     this.loop = true,
@@ -167,7 +167,7 @@ class Swiper extends StatefulWidget {
     bool autoplayDisableOnInteraction = true,
     int duration = kDefaultAutoplayTransactionDuration,
     ValueChanged<int>? onIndexChanged,
-    required int index,
+    int? index,
     SwiperOnTap? onTap,
     bool loop = true,
     Curve curve = Curves.ease,
@@ -230,7 +230,7 @@ class Swiper extends StatefulWidget {
     bool autoplayDisableOnInteraction = true,
     int duration = kDefaultAutoplayTransactionDuration,
     ValueChanged<int>? onIndexChanged,
-    required int index,
+    int? index,
     SwiperOnTap? onTap,
     bool loop = true,
     Curve curve = Curves.ease,
@@ -392,10 +392,10 @@ class _SwiperState extends _SwiperTimerMixin {
 
   @override
   void initState() {
-    _activeIndex = widget.index;
+    _activeIndex = widget.index ?? 0;
     if (_isPageViewLayout()) {
       _pageController = new TransformerPageController(
-          initialPage: widget.index,
+          initialPage: _activeIndex ?? 0,
           loop: widget.loop,
           itemCount: widget.itemCount,
           reverse: widget.transformer == null ? false : widget.transformer!.reverse == true,
