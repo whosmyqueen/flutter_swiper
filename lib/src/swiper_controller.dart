@@ -22,9 +22,9 @@ class SwiperController extends IndexController {
   // this value is PageViewController.pos
   late double pos;
 
-  late int index;
+  late int index = -1;
   late bool animation;
-  late bool autoplay;
+  late bool autoplay = false;
 
   void startAutoplay() {
     event = SwiperController.START_AUTOPLAY;
