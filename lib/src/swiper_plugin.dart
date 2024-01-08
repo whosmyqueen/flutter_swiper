@@ -11,18 +11,18 @@ abstract class SwiperPlugin {
 }
 
 class SwiperPluginConfig {
-  final int? activeIndex;
-  final int? itemCount;
-  final PageIndicatorLayout? indicatorLayout;
-  final Axis? scrollDirection;
-  final bool? loop;
-  final bool? outer;
-  final PageController? pageController;
-  final SwiperController? controller;
-  final SwiperLayout? layout;
+  int? activeIndex = 0;
+  int? itemCount = 0;
+  PageIndicatorLayout? indicatorLayout;
+  Axis? scrollDirection;
+  bool? loop = false;
+  bool? outer = false;
+  PageController? pageController;
+  SwiperController? controller;
+  SwiperLayout? layout;
 
-  const SwiperPluginConfig(
-      {this.activeIndex = -1,
+  SwiperPluginConfig(
+      {this.activeIndex,
       this.itemCount,
       this.indicatorLayout,
       this.outer,
