@@ -30,9 +30,7 @@ class SwiperPluginConfig {
       this.controller,
       this.pageController,
       this.layout,
-      this.loop})
-      : assert(scrollDirection != null),
-        assert(controller != null);
+      this.loop});
 }
 
 class SwiperPluginView extends StatelessWidget {
