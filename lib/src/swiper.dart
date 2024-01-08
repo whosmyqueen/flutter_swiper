@@ -579,7 +579,7 @@ class _SwiperState extends _SwiperTimerMixin {
   @override
   Widget build(BuildContext context) {
     Widget swiper = _buildSwiper();
-    List<Widget> listForStack = List.empty();
+    List<Widget> listForStack = List.empty(growable: true);
     SwiperPluginConfig config = SwiperPluginConfig();
     if (widget.control != null) {
       //Stack
